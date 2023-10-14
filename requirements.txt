@@ -1,0 +1,6 @@
+black
+isort
+jsonschema
+netaddr
+rich
+ruff

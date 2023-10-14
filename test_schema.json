@@ -1,0 +1,95 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "ipv4_addresses": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "allOf": [
+                    {"ipv4": "True"}
+                ]
+            }
+        },
+        "ipv4_private_addresses": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "allOf": [
+                    {"ipv4": "True"},
+                    {"private": "True"}
+                ]
+            }
+        },
+        "ipv4_public_addresses": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "allOf": [
+                    {"ipv4": "True"},
+                    {"public": "True"}
+                ]
+            }
+        },
+        "ipv4_multicast_addresses": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "allOf": [
+                    {"ipv4": "True"},
+                    {"multicast": "True"}
+                ]
+            }
+        },
+        "ipv4_addresses_wplen": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "allOf": [
+                    {"ipv4WithPrefix": "True"}
+                ]
+            }
+        },
+        "ipv4_private_addresses_wplen": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "allOf": [
+                    {"ipv4WithPrefix": "True"},
+                    {"private": "True"}
+                ]
+            }
+        },
+        "ipv4_public_addresses_wplen": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "allOf": [
+                    {"ipv4WithPrefix": "True"},
+                    {"public": "True"}
+                ]
+            }
+        },
+        "ipv4_multicast_addresses_wplen": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "allOf": [
+                    {"ipv4WithPrefix": "True"},
+                    {"multicast": "True"}
+                ]
+            }
+        }
+    },
+    "required": [
+        "ipv4_addresses",
+        "ipv4_private_addresses",
+        "ipv4_public_addresses",
+        "ipv4_multicast_addresses",
+        "ipv4_addresses_wplen",
+        "ipv4_private_addresses_wplen",
+        "ipv4_public_addresses_wplen",
+        "ipv4_multicast_addresses_wplen"
+        ],
+    "additionalProperties": "False"
+}
